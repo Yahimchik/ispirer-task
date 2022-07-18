@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <link rel="shortcut icon" href="../templates/logo.png" type="image/x-icon">
+    <title>Ispirer</title>
+</head>
+<script>
+    const message = "[[#{message}]]";
+
+    function Click() {
+        alert(message);
+    }
+
+</script>
+<body>
+<a href="/?lang=en" style="text-decoration: none;" th:text="#{en}"></a>
+<a href="/?lang=ru" style="text-decoration: none;" th:text="#{ru}"></a>
+
+<h1 th:text="#{greeting}"></h1>
+<button th:text="#{button}" type="submit" onclick="Click()"></button>
+
+</body>
+</html>
